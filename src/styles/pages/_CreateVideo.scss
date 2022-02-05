@@ -1,0 +1,129 @@
+.create_video {
+	.main_header {
+		margin: 0 30px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10px;
+		padding: 0 10px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+		h1 {
+			font-weight: 600;
+			font-size: 25px;
+			line-height: 33px;
+			color: #222222;
+			margin: 0;
+
+			.icon {
+				font-size: 30px;
+				margin-left: 15px;
+			}
+		}
+
+		.buttons {
+			button {
+				padding: 8px 25px;
+				border: none;
+				outline: none;
+
+				background: #46b13d;
+				border-radius: 6px;
+				color: #ffffff;
+				font-size: 14px;
+				font-weight: bold;
+				margin-left: 20px;
+				cursor: pointer;
+
+				&:first-child {
+					background: #f1f1f1;
+					color: #999999;
+				}
+			}
+		}
+	}
+
+	.image_section {
+		margin: 30px;
+		background: #f4f4f4;
+		border-radius: 20px;
+		padding: 20px;
+
+		.img_container {
+			width: 100%;
+			height: 420px;
+			position: relative;
+			overflow: none;
+
+			.background_img {
+				width: 100%;
+				height: 100%;
+				object-fit: center;
+			}
+
+			.actor_img {
+				position: absolute;
+				bottom: 5px;
+				left: calc(50% - 20%);
+				width: 40%;
+				height: 98%;
+				object-fit: fill;
+				overflow: none;
+			}
+		}
+
+		.text_area {
+			width: 100%;
+			background: #ffffff;
+			border-radius: 20px;
+			margin-top: 30px;
+			padding: 20px;
+
+			textarea {
+				width: 100%;
+				height: 80px;
+				font-size: 16px;
+				line-height: 26px;
+				color: #999999;
+				border: none;
+				outline: none;
+			}
+
+			button {
+				background: #f1f1f1;
+				border-radius: 6px;
+				padding: 8px 20px;
+				color: #999999;
+				font-weight: 600;
+				font-size: 14px;
+				border: none;
+				outline: none;
+			}
+		}
+	}
+
+	.setting_header {
+		margin: 30px 0 0 0;
+
+		ul {
+			display: flex;
+			list-style: none;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 30px;
+			margin: 0;
+			padding: 0;
+
+			li {
+				.link {
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 22px;
+					color: #999999;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
