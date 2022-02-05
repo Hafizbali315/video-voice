@@ -3,6 +3,7 @@ import CreateVideo from './containers/CreateVideo'
 import Layout from './containers/Layout'
 import Actors from './containers/Actors'
 import Voice from './containers/Voice'
+import Alignment from './containers/Alignment'
 
 function App() {
 	return (
@@ -14,7 +15,7 @@ function App() {
 							<Route index element={<Actors />} />
 							<Route path="actor" element={<Actors />} />
 							<Route path="voice" element={<Voice />} />
-							<Route path="alignment" element={<Actors />} />
+							<Route path="alignment" element={<Alignment />} />
 							<Route path="background" element={<Actors />} />
 						</Route>
 					</Route>
