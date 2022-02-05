@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CreateVideo from './containers/CreateVideo'
 import Layout from './containers/Layout'
 import Actors from './containers/Actors'
+import Voice from './containers/Voice'
 
 function App() {
 	return (
@@ -12,7 +13,7 @@ function App() {
 						<Route path="/create-video" element={<CreateVideo />}>
 							<Route index element={<Actors />} />
 							<Route path="actor" element={<Actors />} />
-							<Route path="voice" element={<Actors />} />
+							<Route path="voice" element={<Voice />} />
 							<Route path="alignment" element={<Actors />} />
 							<Route path="background" element={<Actors />} />
 						</Route>

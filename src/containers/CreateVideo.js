@@ -2,9 +2,15 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 import Background2 from '../assets/backgrounds/Background4.png'
 
 import Actor2 from '../assets/actors/Actor1.png'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 const CreateVideo = () => {
+	const { pathname } = useLocation()
+
+	const isActive = (pn) => {
+		if (pn === pathname) return 'active'
+	}
+
 	return (
 		<>
 			<div className="create_video">
@@ -20,7 +26,7 @@ const CreateVideo = () => {
 				</div>
 
 				<div className="row">
-					<div className="col-lg-6">
+					<div className="col-lg-7">
 						<div className="image_section">
 							<div className="img_container">
 								<img className="background_img" src={Background2} alt="BackgroundImg" />
@@ -33,29 +39,29 @@ const CreateVideo = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-6">
+					<div className="col-lg-5">
 						<div className="setting_header">
 							<ul>
 								<li>
-									<Link className="link" to="actor">
+									<Link className={`link ${isActive('/create-video') || isActive('/create-video/actor')}`} to="actor">
 										Actor
 									</Link>
 								</li>
 
 								<li>
-									<Link className="link" to="voice">
+									<Link className={`link ${isActive('/create-video/voice')}`} to="voice">
 										Voice
 									</Link>
 								</li>
 
 								<li>
-									<Link className="link" to="alignment">
-										Algnment
+									<Link className={`link ${isActive('/create-video/alignment')}`} to="alignment">
+										Alignment
 									</Link>
 								</li>
 
 								<li>
-									<Link className="link" to="background">
+									<Link className={`link ${isActive('/create-video/background')}`} to="background">
 										Background
 									</Link>
 								</li>
