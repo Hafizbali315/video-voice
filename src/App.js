@@ -5,12 +5,19 @@ import Actors from './containers/Actors'
 import Voice from './containers/Voice'
 import Alignment from './containers/Alignment'
 import BackgroundSelect from './containers/BackgroundSelect'
+import Signin from './containers/Signin'
+import Signup from './containers/Signup'
 
 function App() {
 	return (
 		<div className="App">
 			<Router>
 				<Routes>
+					<Route element={<Layout />}>
+						<Route path="signin" element={<Signin />} />
+						<Route path="signup" element={<Signup />} />
+					</Route>
+
 					<Route element={<Layout />}>
 						<Route path="/create-video" element={<CreateVideo />}>
 							<Route index element={<Actors />} />
