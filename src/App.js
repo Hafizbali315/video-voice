@@ -4,6 +4,7 @@ import Layout from './containers/Layout'
 import Actors from './containers/Actors'
 import Voice from './containers/Voice'
 import Alignment from './containers/Alignment'
+import BackgroundSelect from './containers/BackgroundSelect'
 
 function App() {
 	return (
@@ -16,7 +17,7 @@ function App() {
 							<Route path="actor" element={<Actors />} />
 							<Route path="voice" element={<Voice />} />
 							<Route path="alignment" element={<Alignment />} />
-							<Route path="background" element={<Actors />} />
+							<Route path="background" element={<BackgroundSelect />} />
 						</Route>
 					</Route>
 				</Routes>
