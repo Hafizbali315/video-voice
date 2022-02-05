@@ -7,6 +7,7 @@ import Alignment from './containers/Alignment'
 import BackgroundSelect from './containers/BackgroundSelect'
 import Signin from './containers/Signin'
 import Signup from './containers/Signup'
+import SavedVideos from './containers/SavedVideos'
 
 function App() {
 	return (
@@ -26,6 +27,8 @@ function App() {
 							<Route path="alignment" element={<Alignment />} />
 							<Route path="background" element={<BackgroundSelect />} />
 						</Route>
+
+						<Route path="/saved-videos" element={<SavedVideos />} />
 					</Route>
 				</Routes>
 			</Router>

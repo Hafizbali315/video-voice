@@ -10,6 +10,10 @@ const Sidebar = () => {
 
 	console.log(pathname)
 
+	const isActive = (pn) => {
+		if (pn === pathname) return 'active'
+	}
+
 	return (
 		<div className="sidebar">
 			<div className="top">
@@ -23,11 +27,20 @@ const Sidebar = () => {
 					<div></div>
 				) : (
 					<div className="links">
-						<Link to="/create-video" className="icon_container active">
+						<Link
+							to="/create-video"
+							className={`icon_container ${
+								isActive('/create-video') ||
+								isActive('/create-video/voice') ||
+								isActive('/create-video/actor') ||
+								isActive('/create-video/alignment') ||
+								isActive('/create-video/background')
+							}`}
+						>
 							<FaVideo className="icon" />
 						</Link>
 
-						<Link to="/saved-videos" className="icon_container">
+						<Link to="/saved-videos" className={`icon_container ${isActive('/saved-videos')}`}>
 							<BsCollectionPlay className="icon" />
 						</Link>
 					</div>
