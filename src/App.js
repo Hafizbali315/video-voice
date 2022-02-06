@@ -8,6 +8,10 @@ import BackgroundSelect from './containers/BackgroundSelect'
 import Signin from './containers/Signin'
 import Signup from './containers/Signup'
 import SavedVideos from './containers/SavedVideos'
+import MyAccount from './containers/MyAccount'
+import Profile from './containers/Profile'
+import MyPlan from './containers/MyPlan'
+import Billing from './containers/Billing'
 
 function App() {
 	return (
@@ -29,6 +33,13 @@ function App() {
 						</Route>
 
 						<Route path="/saved-videos" element={<SavedVideos />} />
+
+						<Route path="/my-account" element={<MyAccount />}>
+							<Route index element={<Profile />} />
+							<Route path="profile" element={<Profile />} />
+							<Route path="my-plan" element={<MyPlan />} />
+							<Route path="billing" element={<Billing />} />
+						</Route>
 					</Route>
 				</Routes>
 			</Router>

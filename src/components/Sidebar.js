@@ -51,7 +51,7 @@ const Sidebar = () => {
 				<div></div>
 			) : (
 				<div className="bottom">
-					<Link to="/" className="profile_container">
+					<Link to="/my-account" className="profile_container">
 						<div className="img_contaienr">
 							<img src={ProfileThumbnail} alt="ProfileThumbnail" />
 						</div>
