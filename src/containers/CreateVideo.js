@@ -1,11 +1,15 @@
+import { Link, Outlet, useLocation } from 'react-router-dom'
+import { useSpeechSynthesis } from 'react-speech-kit'
+
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import Background2 from '../assets/backgrounds/Background4.png'
-
 import Actor2 from '../assets/actors/Actor1.png'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { useState } from 'react'
 
 const CreateVideo = () => {
 	const { pathname } = useLocation()
+	const [value, setValue] = useState('')
+	const { speak } = useSpeechSynthesis()
 
 	const isActive = (pn) => {
 		if (pn === pathname) return 'active'
@@ -34,8 +38,12 @@ const CreateVideo = () => {
 							</div>
 
 							<div className="text_area">
-								<textarea placeholder="Type or paste your videoscript here. You can also request a translation of an English script to any of 27 other languages"></textarea>{' '}
-								<button>Listen</button>
+								<textarea
+									value={value}
+									onChange={(event) => setValue(event.target.value)}
+									placeholder="Type or paste your videoscript here. You can also request a translation of an English script to any of 27 other languages"
+								></textarea>{' '}
+								<button onClick={() => speak({ text: value })}>Listen</button>
 							</div>
 						</div>
 					</div>
