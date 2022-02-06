@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 const MyAccount = () => {
 	const { pathname } = useLocation()
@@ -37,6 +37,8 @@ const MyAccount = () => {
 					</li>
 				</ul>
 			</div>
+
+			<Outlet />
 		</div>
 	)
 }
