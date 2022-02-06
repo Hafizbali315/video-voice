@@ -90,7 +90,7 @@ const authController = {
 			jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, async (error, result) => {
 				if (error) return res.status(400).json({ msg: 'Please login now.' })
 
-				const user = await Users.findById(result.id).select('-password').populate('', '-password')
+				const user = await Users.findById(result.id).select('-password')
 
 				if (!user) return res.status(400).json({ msg: 'This does not exist.' })
 
